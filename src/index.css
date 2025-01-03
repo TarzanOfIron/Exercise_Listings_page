@@ -25,9 +25,40 @@ nav {
 
 main, .flex_container {
     margin-left: 3em;
-    margin-right: 3em;
+    margin-right: 3em; 
 }
 
+.grid_container {
+    padding-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2em 1em
+}
 
+.listing {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    text-decoration: none;
+    color: black;
+}
 
+.listing > img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
 
+.listing > .location, .distance, .price {
+    grid-column: 1/2;
+}
+
+.listing > .rating {
+    grid-column: 2/3;
+}
+
+.listing > div > h3, .location, .distance, .price {
+    margin-bottom: 0%;
+}
